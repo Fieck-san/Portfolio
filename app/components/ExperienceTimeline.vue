@@ -12,27 +12,30 @@
 
       <div class="max-w-4xl mx-auto">
         <div class="relative">
-          <div class="absolute left-8 top-0 bottom-0 w-px bg-gray-200"></div>
+          <!-- Timeline line - hidden on mobile -->
+          <div class="absolute left-8 top-0 bottom-0 w-px bg-gray-200 hidden md:block"></div>
 
           <div
             v-for="(item, index) in timeline"
             :key="index"
-            class="relative flex items-start mb-8"
+            class="relative flex flex-col md:flex-row md:items-start mb-8 last:mb-0"
           >
+            <!-- Year badge -->
             <div
-              class="flex-shrink-0 w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mr-6"
+              class="flex-shrink-0 w-16 h-16 md:w-16 md:h-16 w-12 h-12 bg-primary-600 rounded-full flex items-center justify-center md:mr-6 mb-4 md:mb-0 mx-auto md:mx-0"
             >
-              <span class="text-white font-semibold">{{ item.year }}</span>
+              <span class="text-white font-semibold text-sm md:text-base">{{ item.year }}</span>
             </div>
 
-            <div class="flex-1 card p-6">
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">
+            <!-- Content card -->
+            <div class="flex-1 card p-4 md:p-6">
+              <h3 class="text-lg md:text-xl font-semibold text-gray-900 mb-2">
                 {{ item.title }}
               </h3>
-              <p class="text-primary-600 font-medium mb-3">
+              <p class="text-primary-600 font-medium mb-3 text-sm md:text-base">
                 {{ item.company }}
               </p>
-              <p class="text-gray-600">
+              <p class="text-gray-600 text-sm md:text-base leading-relaxed">
                 {{ item.description }}
               </p>
             </div>

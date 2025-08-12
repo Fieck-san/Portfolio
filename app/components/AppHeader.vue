@@ -47,11 +47,11 @@
 
         <button
           @click="toggleMobileMenu"
-          class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+          class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors flex items-center justify-center w-10 h-10"
           aria-label="Toggle mobile menu"
         >
-          <Icon name="menu" v-if="!isMobileMenuOpen" />
-          <Icon name="x" v-else />
+          <Icon name="menu" v-if="!isMobileMenuOpen" class="pointer-events-none" />
+          <Icon name="x" v-else class="pointer-events-none" />
         </button>
       </div>
 
