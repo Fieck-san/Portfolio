@@ -10,26 +10,33 @@
 
 <script setup lang="ts">
 const project = {
-  title: 'Barber Management App',
-  subtitle: 'Dual-Interface Booking System',
-  description: 'Complete booking and management system for barber shops with dual user interfaces',
-  image: '/projects/barber-management.jpg',
-  liveUrl: 'https://barber-app.example.com',
-  githubUrl: 'https://github.com/username/barber-management',
+  title: "My Barber",
+  subtitle: "Dual-Interface Booking System",
+  description:
+    "Complete booking and management system for barber shops with dual user interfaces",
+  image: "/projects/barbershop.png",
+  liveUrl: "https://mybarberdev.my/",
+  githubUrl: "https://github.com/fieck-san",
   technologies: [
-    'React', 'TypeScript', 'Node.js', 'Express.js',
-    'MySQL', 'Socket.io', 'Stripe API'
+    "React",
+    "TypeScript",
+    "Node.js",
+    "Express.js",
+    "MySQL",
+    "Socket.io",
+    "Stripe API",
   ],
   features: [
-    'Business owner dashboard',
-    'Customer booking interface',
-    'Real-time availability',
-    'Payment processing'
-  ]
-}
+    "Business owner dashboard",
+    "Customer booking interface",
+    "Real-time availability",
+    "Payment processing",
+  ],
+};
 
 useSeoMeta({
-  title: 'Barber Management App - Project Case Study',
-  description: 'Case study of the Barber Management App with dual-interface booking system',
-})
+  title: "My Barber",
+  description:
+    "Case study of the Barber Management App with dual-interface booking system",
+});
 </script>

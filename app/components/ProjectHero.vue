@@ -14,7 +14,7 @@
             v-if="project.image"
             :src="project.image" 
             :alt="project.title"
-            class="w-full h-full object-cover"
+            class="w-full h-full object-contain"
           />
           <div v-else class="w-full h-full bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center">
             <span class="text-white text-4xl font-bold">{{ project.title }}</span>
@@ -30,7 +30,6 @@
             class="btn-primary"
           >
             View Live Demo
-            <Icon name="external-link" class="ml-2 w-4 h-4" />
           </a>
           
           <a 
@@ -41,7 +40,6 @@
             class="btn-secondary"
           >
             View Code
-            <Icon name="github" class="ml-2 w-4 h-4" />
           </a>
         </div>
       </div>

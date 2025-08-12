@@ -53,7 +53,7 @@ const featuredProjects = [
   },
   {
     id: 3,
-    title: "Barber Management App",
+    title: "My Barber",
     description:
       "Complete booking system with dual interfaces for businesses and customers.",
     image: "/projects/barbershop.png",

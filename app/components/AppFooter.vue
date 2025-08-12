@@ -9,14 +9,14 @@
           </p>
           <div class="flex space-x-4">
             <a
-              href="#"
+              href="https://github.com/Fieck-san"
               class="text-gray-400 hover:text-white transition-colors"
               aria-label="GitHub"
             >
               <Icon name="github" class="w-5 h-5" />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/syafiq-affandi-483203271/"
               class="text-gray-400 hover:text-white transition-colors"
               aria-label="LinkedIn"
             >

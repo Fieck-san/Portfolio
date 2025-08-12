@@ -10,25 +10,33 @@
 
 <script setup lang="ts">
 const project = {
-  title: 'TaskFlow AI',
-  subtitle: 'AI-Powered Project Management Dashboard',
-  description: 'Enterprise-ready project management solution with AI capabilities',
-  image: '/projects/taskflow-ai.jpg',
-  liveUrl: 'https://taskflow-ai.example.com',
-  githubUrl: 'https://github.com/username/taskflow-ai',
+  title: "TaskFlow AI",
+  subtitle: "AI-Powered Project Management Dashboard",
+  description:
+    "Enterprise-ready project management solution with AI capabilities",
+  image: "/projects/taskflowai.png",
+  liveUrl: "https://taskflow-ai.example.com",
+  githubUrl: "https://github.com/Fieck-san/taskflow-ai",
   technologies: [
-    'Next.js 14', 'TypeScript', 'Tailwind CSS', 'Shadcn/UI',
-    'Prisma ORM', 'PostgreSQL', 'Supabase', 'NextAuth.js'
+    "Next.js 14",
+    "TypeScript",
+    "Tailwind CSS",
+    "Shadcn/UI",
+    "Prisma ORM",
+    "PostgreSQL",
+    "Supabase",
+    "NextAuth.js",
   ],
   features: [
-    'Core Project Management (CRUD, team collaboration)',
-    'AI-Powered Features (coming soon)',
-    'Enterprise-Ready capabilities'
-  ]
-}
+    "Core Project Management (CRUD, team collaboration)",
+    "AI-Powered Features (coming soon)",
+    "Enterprise-Ready capabilities",
+  ],
+};
 
 useSeoMeta({
-  title: 'TaskFlow AI - Project Case Study',
-  description: 'Deep dive into TaskFlow AI - AI-powered project management dashboard',
-})
+  title: "TaskFlow AI - Project Case Study",
+  description:
+    "Deep dive into TaskFlow AI - AI-powered project management dashboard",
+});
 </script>
