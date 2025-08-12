@@ -126,12 +126,11 @@ const submitForm = async () => {
       config.public.emailjsServiceId as string,
       config.public.emailjsTemplateId as string,
       {
-        to_email: "syafiqworkissue@gmail.com",
-        from_name: form.name,
-        from_email: form.email,
+        name: form.name,
+        email: form.email,
         subject: form.subject,
         message: form.message,
-        reply_to: form.email,
+        to_email: "syafiqworkissue@gmail.com",
       }
     );
 

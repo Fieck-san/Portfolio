@@ -9,6 +9,13 @@ export default defineNuxtConfig({
     '@vueuse/nuxt'
   ],
 
+  runtimeConfig: {
+    public: {
+      emailjsServiceId: process.env.NUXT_PUBLIC_EMAILJS_SERVICE_ID,
+      emailjsTemplateId: process.env.NUXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+      emailjsPublicKey: process.env.NUXT_PUBLIC_EMAILJS_PUBLIC_KEY
+    }
+  },
 
   googleFonts: {
     families: {
@@ -16,7 +23,6 @@ export default defineNuxtConfig({
       'JetBrains Mono': [400, 500]
     }
   },
-
 
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
