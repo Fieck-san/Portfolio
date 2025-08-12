@@ -5,7 +5,10 @@
         <form @submit.prevent="submitForm" class="card p-8">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <div>
-              <label for="name" class="block text-sm font-medium text-gray-700 mb-2">
+              <label
+                for="name"
+                class="block text-sm font-medium text-gray-700 mb-2"
+              >
                 Name *
               </label>
               <input
@@ -14,12 +17,15 @@
                 type="text"
                 required
                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none transition-colors"
-                placeholder="Your full name"
+                placeholder="Your name"
               />
             </div>
-            
+
             <div>
-              <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+              <label
+                for="email"
+                class="block text-sm font-medium text-gray-700 mb-2"
+              >
                 Email *
               </label>
               <input
@@ -32,9 +38,12 @@
               />
             </div>
           </div>
-          
+
           <div class="mb-6">
-            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">
+            <label
+              for="subject"
+              class="block text-sm font-medium text-gray-700 mb-2"
+            >
               Subject *
             </label>
             <input
@@ -46,9 +55,12 @@
               placeholder="Project inquiry, collaboration, etc."
             />
           </div>
-          
+
           <div class="mb-6">
-            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">
+            <label
+              for="message"
+              class="block text-sm font-medium text-gray-700 mb-2"
+            >
               Message *
             </label>
             <textarea
@@ -60,20 +72,20 @@
               placeholder="Tell me about your project..."
             ></textarea>
           </div>
-          
-          <button 
-            type="submit" 
+
+          <button
+            type="submit"
             :disabled="isSubmitting"
             class="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <span v-if="!isSubmitting">Send Message</span>
             <span v-else>Sending...</span>
           </button>
-          
+
           <p v-if="successMessage" class="mt-4 text-green-600 text-center">
             {{ successMessage }}
           </p>
-          
+
           <p v-if="errorMessage" class="mt-4 text-red-600 text-center">
             {{ errorMessage }}
           </p>
@@ -84,39 +96,60 @@
 </template>
 
 <script setup lang="ts">
-const form = reactive({
-  name: '',
-  email: '',
-  subject: '',
-  message: ''
-})
+import emailjs from "@emailjs/browser";
 
-const isSubmitting = ref(false)
-const successMessage = ref('')
-const errorMessage = ref('')
+const form = reactive({
+  name: "",
+  email: "",
+  subject: "",
+  message: "",
+});
+
+const isSubmitting = ref(false);
+const successMessage = ref("");
+const errorMessage = ref("");
+
+// EmailJS configuration
+const config = useRuntimeConfig();
 
 const submitForm = async () => {
-  isSubmitting.value = true
-  successMessage.value = ''
-  errorMessage.value = ''
-  
+  isSubmitting.value = true;
+  successMessage.value = "";
+  errorMessage.value = "";
+
   try {
-    // TODO: Implement actual form submission
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    
-    successMessage.value = 'Message sent successfully! I\'ll get back to you soon.'
-    
+    // Initialize EmailJS
+    emailjs.init(config.public.emailjsPublicKey as string);
+
+    // Send email using EmailJS
+    await emailjs.send(
+      config.public.emailjsServiceId as string,
+      config.public.emailjsTemplateId as string,
+      {
+        to_email: "syafiqworkissue@gmail.com",
+        from_name: form.name,
+        from_email: form.email,
+        subject: form.subject,
+        message: form.message,
+        reply_to: form.email,
+      }
+    );
+
+    successMessage.value =
+      "Message sent successfully! I'll get back to you soon.";
+
     // Reset form
     Object.assign(form, {
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    })
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
   } catch (error) {
-    errorMessage.value = 'Failed to send message. Please try again.'
+    console.error("EmailJS Error:", error);
+    errorMessage.value = "Failed to send message. Please try again.";
   } finally {
-    isSubmitting.value = false
+    isSubmitting.value = false;
   }
-}
+};
 </script>

@@ -8,26 +8,19 @@
             Frontend Engineer with Backend Capabilities
           </p>
           <div class="flex space-x-4">
-            <a 
-              href="#" 
+            <a
+              href="#"
               class="text-gray-400 hover:text-white transition-colors"
               aria-label="GitHub"
             >
               <Icon name="github" class="w-5 h-5" />
             </a>
-            <a 
-              href="#" 
+            <a
+              href="#"
               class="text-gray-400 hover:text-white transition-colors"
               aria-label="LinkedIn"
             >
               <Icon name="linkedin" class="w-5 h-5" />
-            </a>
-            <a 
-              href="#" 
-              class="text-gray-400 hover:text-white transition-colors"
-              aria-label="Twitter"
-            >
-              <Icon name="twitter" class="w-5 h-5" />
             </a>
           </div>
         </div>
@@ -36,24 +29,24 @@
           <h4 class="font-semibold mb-4">Quick Links</h4>
           <ul class="space-y-2">
             <li>
-              <NuxtLink 
-                to="/about" 
+              <NuxtLink
+                to="/about"
                 class="text-gray-400 hover:text-white transition-colors"
               >
                 About
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink 
-                to="/projects" 
+              <NuxtLink
+                to="/projects"
                 class="text-gray-400 hover:text-white transition-colors"
               >
                 Projects
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink 
-                to="/contact" 
+              <NuxtLink
+                to="/contact"
                 class="text-gray-400 hover:text-white transition-colors"
               >
                 Contact
@@ -66,24 +59,24 @@
           <h4 class="font-semibold mb-4">Featured Projects</h4>
           <ul class="space-y-2">
             <li>
-              <NuxtLink 
-                to="/projects/taskflow-ai" 
+              <NuxtLink
+                to="/projects/taskflow-ai"
                 class="text-gray-400 hover:text-white transition-colors"
               >
                 TaskFlow AI
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink 
-                to="/projects/codereview-ai" 
+              <NuxtLink
+                to="/projects/codereview-ai"
                 class="text-gray-400 hover:text-white transition-colors"
               >
                 CodeReview AI
               </NuxtLink>
             </li>
             <li>
-              <NuxtLink 
-                to="/projects/barber-management" 
+              <NuxtLink
+                to="/projects/barber-management"
                 class="text-gray-400 hover:text-white transition-colors"
               >
                 Barber Management
@@ -103,5 +96,5 @@
 </template>
 
 <script setup lang="ts">
-const currentYear = new Date().getFullYear()
+const currentYear = new Date().getFullYear();
 </script>

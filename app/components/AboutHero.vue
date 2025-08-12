@@ -10,17 +10,19 @@
             Frontend Engineer with Backend Capabilities
           </p>
           <p class="text-lg text-gray-600 leading-relaxed">
-            I'm a passionate full-stack developer who specializes in creating 
-            exceptional digital experiences. With expertise in modern frontend 
-            frameworks and solid backend knowledge, I build applications that 
+            I'm a passionate full-stack developer who specializes in creating
+            exceptional digital experiences. With expertise in modern frontend
+            frameworks and solid backend knowledge, I build applications that
             are both beautiful and functional.
           </p>
         </div>
-        
+
         <div class="flex justify-center lg:justify-end animate-slide-up">
-          <div class="w-80 h-80 bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl flex items-center justify-center">
-            <span class="text-white text-4xl font-bold">Photo</span>
-          </div>
+          <img
+            src="/syafiq.jpg"
+            alt="Fieck"
+            class="w-80 h-80 rounded-2xl object-cover shadow-2xl"
+          />
         </div>
       </div>
     </div>

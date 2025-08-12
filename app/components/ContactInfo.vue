@@ -5,24 +5,37 @@
         <div class="card p-6">
           <Icon name="email" class="mx-auto mb-4 text-primary-600" size="32" />
           <h3 class="text-lg font-semibold text-gray-900 mb-2">Email</h3>
-          <a href="mailto:your.email@example.com" class="text-gray-600 hover:text-primary-600 transition-colors">
-            your.email@example.com
+          <a
+            href="mailto:your.email@example.com"
+            class="text-gray-600 hover:text-primary-600 transition-colors"
+          >
+            syafiqworkissue@gmail.com
           </a>
         </div>
-        
+
         <div class="card p-6">
           <Icon name="github" class="mx-auto mb-4 text-primary-600" size="32" />
           <h3 class="text-lg font-semibold text-gray-900 mb-2">GitHub</h3>
-          <a href="#" class="text-gray-600 hover:text-primary-600 transition-colors">
-            @yourusername
+          <a
+            href="#"
+            class="text-gray-600 hover:text-primary-600 transition-colors"
+          >
+            @Fieck-san
           </a>
         </div>
-        
+
         <div class="card p-6">
-          <Icon name="linkedin" class="mx-auto mb-4 text-primary-600" size="32" />
+          <Icon
+            name="linkedin"
+            class="mx-auto mb-4 text-primary-600"
+            size="32"
+          />
           <h3 class="text-lg font-semibold text-gray-900 mb-2">LinkedIn</h3>
-          <a href="#" class="text-gray-600 hover:text-primary-600 transition-colors">
-            /in/yourname
+          <a
+            href="#"
+            class="text-gray-600 hover:text-primary-600 transition-colors"
+          >
+            /in/syafiq-affandi-483203271/
           </a>
         </div>
       </div>

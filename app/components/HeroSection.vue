@@ -9,7 +9,7 @@
         <div class="animate-fade-in">
           <h1 class="text-5xl lg:text-7xl font-bold text-gray-900 mb-6">
             Hello, I'm
-            <span class="text-gradient">Your Name</span>
+            <span class="text-gradient">Fieck</span>
           </h1>
 
           <p class="text-xl lg:text-2xl text-gray-600 mb-4 max-w-3xl mx-auto">
